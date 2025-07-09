@@ -1,0 +1,4 @@
+auth-service/node_modules/
+auth-service/.env
+gateway/node_modules/
+gateway/.env
