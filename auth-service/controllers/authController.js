@@ -10,15 +10,7 @@ export const userRegister = async (req, res) => {
 
     res.status(201).json({ message: 'User created' });
   } catch (err) {
-    // Gestion des erreurs de validation (ex: email déjà existant)
-    if (err.name === 'ValidationError') {
-      return res.status(400).json({
-        message: "Erreur lors de l'inscription",
-        data: err.errors
-      });
-    }
-
-    res.status(500).json({ message: err.message });
+    res.status(400).json({ message: err.message });
   }
 };
 
